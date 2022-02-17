@@ -105,7 +105,7 @@ impl Token {
 			"!" => Token {
 				token: TokenKind::Symbol(Symbol::Logic(LogicSymbols::Not)),
 			},
-			"\n" => Token {
+			"\0" => Token {
 				token: TokenKind::Eof,
 			},
 			_ => match Keyword::try_from(value.as_str()) {

@@ -150,11 +150,11 @@ where
 						'\0' => state = Self::State::Finished,
 						_ => return WordsCollector::collect(cursor),
 					},
-					_ => return Ok(Token::get("\n".to_string())),
+					_ => return Ok(Token::get("\0".to_string())),
 				},
 				_ => {}
 			}
 		}
-		Ok(Token::get("\n".to_string()))
+		Ok(Token::get("\0".to_string()))
 	}
 }
