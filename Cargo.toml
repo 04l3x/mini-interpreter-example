@@ -1,0 +1,9 @@
+[workspace]
+members = [
+	"bytecode",
+	"error",
+	"interpreter",
+	"lexer",
+	"parser",
+	"symbols",
+]
